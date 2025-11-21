@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "227945752758",
+    "project_id": "docschedule-bb9a0",
+    "storage_bucket": "docschedule-bb9a0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:227945752758:android:56738a2b1ab4f80cfe5e17",
+        "android_client_info": {
+          "package_name": "com.nibm.docschedule"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbBWRhKkq8qWK_70mrbJIFlHOXYkV-pww"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
