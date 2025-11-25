@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple">
+
+    <!-- TOP HALO BACKGROUND -->
+    <ImageView
+        android:id="@+id/halo_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/white_halo"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true" />
+
+    <!-- DOCTOR IMAGE BOTTOM -->
+    <ImageView
+        android:id="@+id/doctor_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/intro_women"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <!-- TEXT + BUTTON COLUMN -->
+    <LinearLayout
+        android:id="@+id/text_button_group"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="48dp"
+        android:paddingEnd="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <!-- TITLE TEXT -->
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sub_intro"
+            android:textColor="@android:color/white"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <!-- SPACE -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="24dp" />
+
+        <!-- GET STARTED BUTTON -->
+        <LinearLayout
+            android:id="@+id/get_started_btn"
+            android:orientation="horizontal"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_button_darkpurple"
+            android:paddingStart="8dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/get_started"
+                android:textSize="20sp"
+                android:textColor="@android:color/white" />
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="0dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/white_arrow" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
