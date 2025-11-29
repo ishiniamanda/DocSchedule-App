@@ -1,10 +1,8 @@
-package com.nibm.docschedule.feature.intro
+package com.nibm.docschedule.Activity
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.nibm.docschedule.MainActivity
-import com.nibm.docschedule.R
 import com.nibm.docschedule.databinding.ActivityIntroBinding
 
 class IntroActivity : BaseActivity() {
