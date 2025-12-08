@@ -2,7 +2,6 @@ package com.nibm.docschedule.Activity
 
 import android.content.Intent
 import android.os.Bundle
-import com.nibm.docschedule.MainActivity
 import com.nibm.docschedule.databinding.ActivityIntroBinding
 
 class IntroActivity : BaseActivity() {
@@ -16,7 +15,7 @@ class IntroActivity : BaseActivity() {
 
         binding.getStartedBtn.setOnClickListener {
             startActivity(Intent(this@IntroActivity, MainActivity::class.java))
-            finish() // Optional: prevent going back to intro
+            finish()
         }
     }
 }

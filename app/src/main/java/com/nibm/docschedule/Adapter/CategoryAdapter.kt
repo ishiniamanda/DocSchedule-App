@@ -16,17 +16,17 @@ class CategoryAdapter(val items: MutableList<CategoryModel>) :
     inner class Viewholder(val binding: ViewholderCategoryBinding) :
         RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Viewholder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryAdapter.Viewholder {
         context = parent.context
         val binding = ViewholderCategoryBinding.inflate(
-            LayoutInflater.from(parent.context),
+            LayoutInflater.from(context),
             parent,
             false
         )
         return Viewholder(binding)
     }
 
-    override fun onBindViewHolder(holder: Viewholder, position: Int) {
+    override fun onBindViewHolder(holder: CategoryAdapter.Viewholder, position: Int) {
         val item = items[position]
         holder.binding.titleTxt.text = item.Name
 

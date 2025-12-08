@@ -8,13 +8,18 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.nibm.docschedule.Domain.CategoryModel
+import com.nibm.docschedule.Domain.DoctorsModel
 
-class MainView(): ViewModel() {
+class MainViewModel(): ViewModel() {
     private val firebaseDatabase= FirebaseDatabase.getInstance()
 
     private val _category= MutableLiveData<MutableList<CategoryModel>>()
+    private val _doctors= MutableLiveData<MutableList<DoctorsModel>>()
+
 
     val category: LiveData<MutableList<CategoryModel>> = _category
+    val doctors: LiveData<MutableList<DoctorsModel>> = _doctors
+
 
     fun loadCategory(){
         val Ref=firebaseDatabase.getReference("Category")
@@ -34,6 +39,33 @@ class MainView(): ViewModel() {
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
+
+        })
+    }
+
+    fun loadDoctors() {
+        val Ref = firebaseDatabase.getReference("Doctors")
+        Ref.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val lists = mutableListOf<DoctorsModel>()
+
+                for (childSnapshot in snapshot.children) {
+                    val list = childSnapshot.getValue(DoctorsModel::class.java)
+
+                    if (list!=null){
+                        lists.add(list)
+                    }
+                }
+                _doctors.value = lists
+
+                }
+
+
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
 
         })
     }
