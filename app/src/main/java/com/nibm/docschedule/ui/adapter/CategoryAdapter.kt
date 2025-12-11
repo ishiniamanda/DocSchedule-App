@@ -1,11 +1,11 @@
-package com.nibm.docschedule.Adapter
+package com.nibm.docschedule.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.nibm.docschedule.Domain.CategoryModel
+import com.nibm.docschedule.data.model.CategoryModel
 import com.nibm.docschedule.databinding.ViewholderCategoryBinding
 
 class CategoryAdapter(val items: MutableList<CategoryModel>) :
@@ -16,7 +16,7 @@ class CategoryAdapter(val items: MutableList<CategoryModel>) :
     inner class Viewholder(val binding: ViewholderCategoryBinding) :
         RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryAdapter.Viewholder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Viewholder {
         context = parent.context
         val binding = ViewholderCategoryBinding.inflate(
             LayoutInflater.from(context),
@@ -26,7 +26,7 @@ class CategoryAdapter(val items: MutableList<CategoryModel>) :
         return Viewholder(binding)
     }
 
-    override fun onBindViewHolder(holder: CategoryAdapter.Viewholder, position: Int) {
+    override fun onBindViewHolder(holder: Viewholder, position: Int) {
         val item = items[position]
         holder.binding.titleTxt.text = item.Name
 

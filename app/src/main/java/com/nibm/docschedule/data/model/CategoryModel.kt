@@ -1,4 +1,4 @@
-package com.nibm.docschedule.Domain
+package com.nibm.docschedule.data.model
 
 data class CategoryModel(
     val Id:Int=0,

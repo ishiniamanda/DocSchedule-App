@@ -1,4 +1,4 @@
-package com.nibm.docschedule.Activity
+package com.nibm.docschedule.ui.common
 
 import android.os.Bundle
 import android.view.WindowManager

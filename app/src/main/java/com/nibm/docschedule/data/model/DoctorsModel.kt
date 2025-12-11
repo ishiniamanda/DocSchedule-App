@@ -1,4 +1,4 @@
-package com.nibm.docschedule.Domain
+package com.nibm.docschedule.data.model
 
 import android.os.Parcel
 import android.os.Parcelable

@@ -1,15 +1,11 @@
-package com.nibm.docschedule.Activity
+package com.nibm.docschedule.ui.details
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
-import com.nibm.docschedule.Domain.DoctorsModel
-import com.nibm.docschedule.R
+import com.nibm.docschedule.ui.common.BaseActivity
+import com.nibm.docschedule.data.model.DoctorsModel
 import com.nibm.docschedule.databinding.ActivityDetailBinding
 
 class DetailActivity : BaseActivity() {
@@ -18,7 +14,7 @@ class DetailActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding=ActivityDetailBinding.inflate(layoutInflater)
+        binding= ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
@@ -53,20 +49,24 @@ class DetailActivity : BaseActivity() {
             }
             callBtn.setOnClickListener {
                 val uri="tel:"+item.Mobile.trim()
-                val intent=Intent(Intent.ACTION_DIAL,
-                     Uri.parse(uri))
+                val intent= Intent(
+                    Intent.ACTION_DIAL,
+                    Uri.parse(uri)
+                )
                 startActivity(intent)
 
             }
 
             derectionBtn.setOnClickListener {
-                val intent=Intent(Intent.ACTION_VIEW,
-                    Uri.parse(item.Location))
+                val intent= Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse(item.Location)
+                )
                 startActivity(intent)
 
             }
             shareBtn.setOnClickListener {
-                val intent=Intent(Intent.ACTION_SEND)
+                val intent= Intent(Intent.ACTION_SEND)
                 intent.setType("text/plain")
                 intent.putExtra(Intent.EXTRA_SUBJECT,item.Name)
                 intent.putExtra(Intent.EXTRA_TEXT,item.Name+" "+item.Address+" "+item.Mobile)

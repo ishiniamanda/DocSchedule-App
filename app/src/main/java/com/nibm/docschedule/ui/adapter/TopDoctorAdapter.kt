@@ -1,4 +1,4 @@
-package com.nibm.docschedule.Adapter
+package com.nibm.docschedule.ui.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -8,9 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.request.RequestOptions
-import com.nibm.docschedule.Activity.DetailActivity
-import com.nibm.docschedule.Domain.DoctorsModel
+import com.nibm.docschedule.data.model.DoctorsModel
 import com.nibm.docschedule.databinding.ViewholderTopDoctorBinding
+import com.nibm.docschedule.ui.details.DetailActivity
 
 class TopDoctorAdapter(val items: MutableList<DoctorsModel>) :
     RecyclerView.Adapter<TopDoctorAdapter.ViewHolder>() {

@@ -1,4 +1,4 @@
-package com.nibm.docschedule.ViewModel
+package com.nibm.docschedule.ui.main.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -7,8 +7,8 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.nibm.docschedule.Domain.CategoryModel
-import com.nibm.docschedule.Domain.DoctorsModel
+import com.nibm.docschedule.data.model.CategoryModel
+import com.nibm.docschedule.data.model.DoctorsModel
 
 class MainViewModel(): ViewModel() {
     private val firebaseDatabase= FirebaseDatabase.getInstance()
@@ -23,7 +23,7 @@ class MainViewModel(): ViewModel() {
 
     fun loadCategory(){
         val Ref=firebaseDatabase.getReference("Category")
-        Ref.addValueEventListener(object : ValueEventListener{
+        Ref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val lists=mutableListOf<CategoryModel>()
                 for (childSnapshot in snapshot.children){
