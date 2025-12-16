@@ -12,6 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DocSchedule">
         <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ui.doctors.TopDoctorsActivity"
             android:exported="false" />
         <activity
@@ -28,12 +39,8 @@
             android:exported="false" /> <!-- Intro Screen should be the first screen -->
         <activity
             android:name=".ui.intro.IntroActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity> <!-- MainActivity is still available but NOT launcher -->
         <activity
             android:name=".ui.main.MainActivity"
@@ -41,3 +48,9 @@
     </application>
 
 </manifest>
+
+<!--<intent-filter>-->
+<!--<action android:name="android.intent.action.MAIN" />-->
+
+<!--<category android:name="android.intent.category.LAUNCHER" />-->
+<!--</intent-filter>-->
