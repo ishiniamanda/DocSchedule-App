@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -12,13 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DocSchedule">
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.contact.ContactActivity"
             android:exported="false" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".ui.auth.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.SignupActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -39,18 +45,15 @@
             android:exported="false" /> <!-- Intro Screen should be the first screen -->
         <activity
             android:name=".ui.intro.IntroActivity"
-            android:exported="false">
-
-        </activity> <!-- MainActivity is still available but NOT launcher -->
+            android:exported="false"></activity> <!-- MainActivity is still available but NOT launcher -->
         <activity
             android:name=".ui.main.MainActivity"
             android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBjL-jw_boDlwZ0akORg6_EkDrnAtTO6t0" />
+
     </application>
 
 </manifest>
-
-<!--<intent-filter>-->
-<!--<action android:name="android.intent.action.MAIN" />-->
-
-<!--<category android:name="android.intent.category.LAUNCHER" />-->
-<!--</intent-filter>-->

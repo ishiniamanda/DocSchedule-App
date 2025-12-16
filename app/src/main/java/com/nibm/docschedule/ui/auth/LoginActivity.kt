@@ -1,10 +1,11 @@
-package com.nibm.docschedule
+package com.nibm.docschedule.ui.auth
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.nibm.docschedule.ui.auth.SignupActivity
 import com.nibm.docschedule.databinding.ActivityLoginBinding
 import com.nibm.docschedule.ui.intro.IntroActivity
 

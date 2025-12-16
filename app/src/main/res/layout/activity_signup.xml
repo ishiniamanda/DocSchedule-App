@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/purple">
 
-    <!-- TOP HALO BACKGROUND (same as intro) -->
+    <!-- TOP HALO BACKGROUND -->
     <ImageView
         android:id="@+id/halo_bg"
         android:layout_width="match_parent"
@@ -14,25 +14,69 @@
         android:scaleType="fitXY"
         android:layout_alignParentTop="true" />
 
+    <!-- APP TITLE SECTION -->
+    <LinearLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DocSchedule"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08"
+            android:shadowColor="#80000000"
+            android:shadowDx="0"
+            android:shadowDy="3"
+            android:shadowRadius="6" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smart Doctor Appointment System"
+            android:textColor="#EEEEEE"
+            android:textSize="14sp"
+            android:letterSpacing="0.04" />
+    </LinearLayout>
+
     <!-- SIGN UP CARD -->
     <androidx.cardview.widget.CardView
         android:id="@+id/signup_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
         android:layout_centerInParent="true"
+        android:layout_margin="24dp"
+        android:layout_marginTop="50dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
             android:background="@color/white"
             android:orientation="vertical"
             android:padding="24dp">
 
             <!-- TITLE -->
             <TextView
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Create Account"
@@ -109,19 +153,7 @@
                 android:text="Already have an account? Login"
                 android:textColor="@color/purple"
                 android:textSize="14sp" />
-
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
-
-    <!-- DOCTOR IMAGE BOTTOM (same as intro) -->
-<!--    <ImageView-->
-<!--        android:id="@+id/doctor_image"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:src="@drawable/intro_women"-->
-<!--        android:adjustViewBounds="true"-->
-<!--        android:scaleType="fitCenter"-->
-<!--        android:layout_alignParentBottom="true" />-->
 
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.nibm.docschedule
+package com.nibm.docschedule.ui.auth
 
 import android.content.Intent
 import android.os.Bundle
