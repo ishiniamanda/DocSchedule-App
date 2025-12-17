@@ -15,6 +15,8 @@ import android.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.nibm.docschedule.ui.auth.SignupActivity
 import com.nibm.docschedule.ui.contact.ContactActivity
+import com.nibm.docschedule.ui.help.HelpActivity
+
 
 
 
@@ -31,6 +33,8 @@ class MainActivity : BaseActivity() {
         initTopDoctors()
         setupLogout()
         setupContact()
+        setupHelp()
+
 
     }
 
@@ -90,11 +94,20 @@ class MainActivity : BaseActivity() {
         binding.ivContact.setOnClickListener {
             startActivity(Intent(this, ContactActivity::class.java))
         }
+
+
+    }
+    private fun setupHelp() {
+        binding.layoutHelp.setOnClickListener {
+            startActivity(Intent(this, HelpActivity::class.java))
+        }
     }
 
-
-
-
-
-
 }
+
+
+
+
+
+
+
