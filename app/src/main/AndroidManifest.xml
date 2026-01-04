@@ -13,24 +13,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DocSchedule">
-        <activity
-            android:name=".ui.help.HelpActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.contact.ContactActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.auth.LoginActivity"
-            android:exported="false" />
+
+        <!-- Launcher Activity -->
         <activity
             android:name=".ui.auth.SignupActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Intro Activity -->
+        <activity
+            android:name=".ui.intro.IntroActivity"
+            android:exported="false" />
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="true" />
+
+        <!-- Other Activities -->
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.doctors.TopDoctorsActivity"
             android:exported="false" />
@@ -38,22 +45,19 @@
             android:name=".ui.details.DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".viewholder_top_doctors"
+            android:name=".ui.help.HelpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.contact.ContactActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecordsActivity"
             android:exported="false" />
         <activity
             android:name=".main2"
             android:exported="false" />
-        <activity
-            android:name=".ui.common.BaseActivity"
-            android:exported="false" /> <!-- Intro Screen should be the first screen -->
-        <activity
-            android:name=".ui.intro.IntroActivity"
-            android:exported="false" /> <!-- MainActivity is still available but NOT launcher -->
-        <activity
-            android:name=".ui.main.MainActivity"
-            android:exported="true" />
 
-
+        <!-- Google Maps API key -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBjL-jw_boDlwZ0akORg6_EkDrnAtTO6t0" />

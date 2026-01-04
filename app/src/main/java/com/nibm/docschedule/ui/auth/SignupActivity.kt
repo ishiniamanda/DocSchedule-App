@@ -16,6 +16,7 @@ class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
         binding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -49,9 +50,9 @@ class SignupActivity : AppCompatActivity() {
 
                         Toast.makeText(this, "Account created", Toast.LENGTH_SHORT).show()
 
-                        // GO TO LOGIN
-                        startActivity(Intent(this, LoginActivity::class.java))
+                        startActivity(Intent(this, com.nibm.docschedule.ui.intro.IntroActivity::class.java))
                         finish()
+
 
                     } else {
                         Toast.makeText(

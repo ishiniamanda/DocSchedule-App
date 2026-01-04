@@ -250,7 +250,7 @@
                         android:layout_height="22dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="8dp"
-                        app:srcCompat="@drawable/btn_1"
+                        app:srcCompat="@drawable/ic_baseline_records_24"
                         app:tint="@color/black" />
 
                     <TextView
@@ -258,7 +258,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Emplorer"
+                        android:text="Records"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="10sp" />

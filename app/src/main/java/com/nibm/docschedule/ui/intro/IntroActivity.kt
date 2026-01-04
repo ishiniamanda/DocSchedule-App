@@ -16,8 +16,11 @@ class IntroActivity : BaseActivity() {
         setContentView(binding.root)
 
         binding.getStartedBtn.setOnClickListener {
-            startActivity(Intent(this@IntroActivity, MainActivity::class.java))
-            finish()
+            val intent = Intent(this@IntroActivity, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
         }
+
+
     }
 }
