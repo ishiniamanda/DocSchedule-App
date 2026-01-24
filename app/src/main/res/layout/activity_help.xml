@@ -18,6 +18,8 @@
             android:orientation="vertical">
 
             <!-- TOP PURPLE HEADER -->
+
+            <!-- WHITE CONTENT CONTAINER -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="280dp"
@@ -27,16 +29,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Help And Support"
+
                     android:textColor="@color/white"
                     android:textSize="28sp"
                     android:textStyle="bold"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- WHITE CONTENT CONTAINER -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,8 +59,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Quick Help"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple"
                         android:textSize="20sp"
+                        android:layout_marginLeft="10dp"
                         android:textStyle="bold" />
 
                     <!-- CARD 1 -->
@@ -73,6 +76,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
+                            android:background="@color/white"
                             android:padding="16dp">
 
                             <TextView
@@ -104,6 +108,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
+                            android:background="@color/white"
                             android:padding="16dp">
 
                             <TextView
@@ -129,8 +134,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="24dp"
                         android:text="Contact Support"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple"
                         android:textSize="20sp"
+                        android:layout_marginLeft="10dp"
                         android:textStyle="bold" />
 
                     <!-- SUPPORT CARD -->
@@ -139,13 +145,15 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         app:cardCornerRadius="16dp"
-                        app:cardElevation="4dp">
+                        app:cardElevation="4dp"
+                        android:background="@color/white">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="16dp">
+                            android:padding="16dp"
+                            android:background="@color/white">
 
                             <TextView
                                 android:layout_width="match_parent"

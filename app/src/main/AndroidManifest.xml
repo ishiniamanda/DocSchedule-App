@@ -3,8 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -27,7 +30,7 @@
         <!-- Intro Activity -->
         <activity
             android:name=".ui.intro.IntroActivity"
-            android:exported="false" />
+            android:exported="true" />
 
         <!-- Main Activity -->
         <activity
@@ -37,7 +40,7 @@
         <!-- Other Activities -->
         <activity
             android:name=".ui.auth.LoginActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ui.doctors.TopDoctorsActivity"
             android:exported="false" />
@@ -50,9 +53,28 @@
         <activity
             android:name=".ui.contact.ContactActivity"
             android:exported="false" />
+
         <activity
-            android:name=".RecordsActivity"
+            android:name=".ui.records.RecordsActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".ui.records.AddRecordActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.appointment.MakeAppointmentActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.appointment.MyAppointmentsActivity"
+            android:exported="false"/>
+
+
+
+
+
+
         <activity
             android:name=".main2"
             android:exported="false" />

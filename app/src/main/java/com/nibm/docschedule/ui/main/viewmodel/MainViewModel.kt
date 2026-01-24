@@ -1,5 +1,6 @@
 package com.nibm.docschedule.ui.main.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -37,7 +38,8 @@ class MainViewModel(): ViewModel() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-
+                Log.e("MainViewModel", "Firebase query cancelled", error.toException())
+                _doctors.value = mutableListOf()
             }
 
         })

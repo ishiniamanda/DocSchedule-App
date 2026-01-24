@@ -59,9 +59,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Our Location"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple"
                         android:textSize="20sp"
                         android:textStyle="bold"
+                        android:layout_marginLeft="10dp"
                         android:letterSpacing="0.03" />
 
                     <!-- GOOGLE MAP (SQUARE & WIDE) -->
@@ -92,6 +93,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Phone:"
+                            android:layout_marginLeft="10dp"
                             android:textColor="@color/black"
                             android:textSize="15sp"
                             android:textStyle="bold" />
@@ -118,6 +120,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Email:"
+                            android:layout_marginLeft="10dp"
                             android:textColor="@color/black"
                             android:textSize="15sp"
                             android:textStyle="bold" />
@@ -128,6 +131,32 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:text="support@docschedule.com"
+                            android:textColor="@color/darkPurple"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Address:"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="Main Branch, Colombo 01, Sri Lanka"
                             android:textColor="@color/darkPurple"
                             android:textSize="15sp" />
                     </LinearLayout>

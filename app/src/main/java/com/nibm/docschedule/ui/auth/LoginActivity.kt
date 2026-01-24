@@ -8,6 +8,11 @@ import com.google.firebase.auth.FirebaseAuth
 import com.nibm.docschedule.ui.auth.SignupActivity
 import com.nibm.docschedule.databinding.ActivityLoginBinding
 import com.nibm.docschedule.ui.intro.IntroActivity
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
+import java.util.concurrent.TimeUnit
+import com.nibm.docschedule.worker.AppointmentReminderWorker
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -18,7 +23,15 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
+            requestPermissions(
+                arrayOf(android.Manifest.permission.POST_NOTIFICATIONS),
+                101
+            )
+        }
+
 
         auth = FirebaseAuth.getInstance()
 
@@ -39,6 +52,24 @@ class LoginActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
 
                         Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
+
+
+                        if (task.isSuccessful) {
+
+                            Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
+
+                            val workRequest =
+                                OneTimeWorkRequestBuilder<AppointmentReminderWorker>()
+                                    .setInitialDelay(10, TimeUnit.SECONDS) // TEST: 10 seconds
+                                    .build()
+
+                            WorkManager.getInstance(this).enqueue(workRequest)
+
+                            startActivity(Intent(this, IntroActivity::class.java))
+                            finish()
+                        }
+
+
 
                         // GO TO INTRO SCREEN
                         startActivity(Intent(this, IntroActivity::class.java))

@@ -7,6 +7,8 @@ import com.bumptech.glide.Glide
 import com.nibm.docschedule.ui.common.BaseActivity
 import com.nibm.docschedule.data.model.DoctorsModel
 import com.nibm.docschedule.databinding.ActivityDetailBinding
+import com.nibm.docschedule.ui.appointment.MakeAppointmentActivity
+
 
 class DetailActivity : BaseActivity() {
     private lateinit var binding: ActivityDetailBinding
@@ -35,6 +37,15 @@ class DetailActivity : BaseActivity() {
             backBtn.setOnClickListener {
                 finish()
             }
+            makeBtn.setOnClickListener {
+                val intent = Intent(
+                    this@DetailActivity,
+                    MakeAppointmentActivity::class.java
+                )
+                intent.putExtra("doctor", item) // pass selected doctor
+                startActivity(intent)
+            }
+
             websiteBtn.setOnClickListener {
                 val i = Intent(Intent.ACTION_VIEW)
                 i.setData(Uri.parse(item.Site))

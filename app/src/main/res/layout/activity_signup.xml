@@ -28,6 +28,7 @@
             android:id="@+id/tvAppName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
             android:text="DocSchedule"
             android:textColor="@android:color/white"
             android:textSize="32sp"
@@ -53,7 +54,10 @@
             android:textColor="#EEEEEE"
             android:textSize="14sp"
             android:letterSpacing="0.04" />
+
+
     </LinearLayout>
+
 
     <!-- SIGN UP CARD -->
     <androidx.cardview.widget.CardView
@@ -62,27 +66,26 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_margin="24dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginBottom="-20dp"
         app:cardCornerRadius="20dp"
-        app:cardElevation="8dp">
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@android:color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:background="@color/white"
             android:orientation="vertical"
             android:padding="24dp">
 
             <!-- TITLE -->
             <TextView
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Create Account"
                 android:textColor="@color/purple"
                 android:textSize="26sp"
                 android:textStyle="bold" />
+
 
             <Space
                 android:layout_width="0dp"
@@ -92,31 +95,63 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/gray"
-                android:hint="Username">
+                android:hint="Username"
+                android:textColorHint="#6D6A6A"
+                app:boxBackgroundColor="#F2F2F2"
+                app:boxBackgroundMode="filled"
+                app:boxStrokeColor="#E0E0E0">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etUsername"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="16dp" />
 
+            <!-- USERNAME -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:textColorHint="#6D6A6A"
+                app:boxBackgroundColor="#F2F2F2"
+                app:boxBackgroundMode="filled"
+                app:boxStrokeColor="#E0E0E0">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="16dp" />
+
+
+
             <!-- PASSWORD -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
+                android:textColorHint="#6D6A6A"
+                app:boxBackgroundColor="#F2F2F2"
+                app:boxBackgroundMode="filled"
+                app:boxStrokeColor="#E0E0E0"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:textColor="@android:color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Space
@@ -155,5 +190,4 @@
                 android:textSize="14sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
 </RelativeLayout>

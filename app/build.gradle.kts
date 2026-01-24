@@ -5,6 +5,9 @@ plugins {
     alias(libs.plugins.google.gms.google.services)
     id("kotlin-kapt")    // ← ADD THIS
 
+
+
+
 }
 
 android {
@@ -86,6 +89,12 @@ dependencies {
     kapt("com.github.bumptech.glide:compiler:4.16.0")
 
     implementation("com.google.android.gms:play-services-maps:18.2.0")
+    implementation ("com.google.firebase:firebase-storage-ktx")
+    implementation("androidx.work:work-runtime-ktx:2.9.0")
+
+
+
+
 
 
 

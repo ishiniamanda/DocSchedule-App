@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="300dp"
+    android:viewportWidth="360"
+    android:viewportHeight="300">
+
+    <!-- Base purple wave -->
+    <path
+        android:fillColor="#7B4AE2"
+        android:pathData="
+            M0,0
+            H360
+            V180
+            C270,215 180,135 90,180
+            C45,205 20,215 0,230
+            Z" />
+
+    <!-- Second lighter purple curve -->
+    <path
+        android:fillColor="#9A75F0"
+        android:fillAlpha="0.45"
+        android:pathData="
+            M0,0
+            H360
+            V150
+            C260,185 160,115 80,160
+            C40,185 15,195 0,205
+            Z" />
+
+</vector>
